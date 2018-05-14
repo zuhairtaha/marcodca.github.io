@@ -1,0 +1,473 @@
+/* Mobile First!! */
+
+.wrapper{
+    font-family: 'Source Code Pro', monospace ;
+    letter-spacing: 0.5px ;
+    width: auto;
+    min-width: 320px;
+}
+
+/* Top */
+
+header {
+    background-color: black; 
+    height: 38% ;
+    min-width: 320px ;
+    min-height: 300px;
+    text-align: center ;
+    
+}
+
+h1 {
+    font-size: 12vw ;
+    color: azure ; 
+    padding-right: 3%; 
+}
+
+#photo {
+    width: 40%; 
+    min-width: 100px ;
+    border: 7px solid black ; 
+    border-radius: 50% ;
+    display: block ;
+    margin: auto ;
+    margin-top: -6%;
+    margin-bottom: -6%;
+}
+
+h2 {
+    font-size: 8vw ;
+    color: white; 
+    display: inline;
+}
+
+.nameContainer {
+    display: inline-flex;
+    flex-direction: column;
+    align-content: center;
+    font-size: 10vw ;
+    text-align: center;
+}
+ 
+
+.marco {
+    background-color: white;
+    display: inline-block;
+  
+}
+
+.deCara {
+    color: white; 
+    margin-top: -24% ;
+}
+
+/* Info */
+
+strong {
+  background-color: black;
+  color:white;
+}
+
+span {
+    text-decoration: underline;
+}
+
+.born, .civil, .adress, .phone, .mail  {
+    display: inline-flex;
+    flex-direction: row;
+    width:100% ;
+    align-items: flex-start;
+}
+.bornC, .civilC, .adressC, .phoneC, .mailC  {
+ margin-left:1%;
+ margin-top: auto;
+}
+/* Extra */
+
+.extra{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vw;
+    text-align: center;
+    padding-top: 2%;
+}
+
+#hackLogo{
+    margin-left:auto;
+    margin-right:auto;
+    width: 35%;
+}
+
+/* For bigger screens! */
+@media only screen  and (min-width : 650px) {
+    
+.wrapper {
+    font-size: 3vw ;
+}
+
+    header {
+        height: 20% ;
+        background-color: black ; 
+        display: grid;
+        grid-template-columns:  auto auto ;
+        grid-template-rows: auto auto auto ;
+        grid-row-gap: 0px;
+        
+    }
+
+    h1 {
+        text-align: right;
+        grid-row: 1; 
+        grid-column: 2 ;
+    }
+
+    #photo {
+        grid-row: 1 ;
+        grid-column: 1 ;
+        width: 90%; 
+        margin: auto;
+
+    }
+
+    h2 {
+
+        grid-row: 2 ; 
+        grid-column: 2 ;
+        margin-top: -90px;
+        margin-left: -93%;
+    
+    }
+    .nameContainer{
+        grid-row: 3 ; 
+        grid-column: 2 ;
+        margin-left: -15%; 
+        flex-direction: row;
+        margin-top: -22%;
+        align-items: center; 
+
+    }
+
+    .deCara {
+        margin-top: auto ; 
+        padding-left: 2% ; 
+    }
+
+    .adressC {
+        padding-top: 20px;
+    }            
+}
+
+
+
+/* For laptops and PC */
+
+@media only screen  and (min-width : 1024px) {
+
+  /* General settings */
+  /* Reset margins and paddings */
+    * {
+        margin: 0;
+        padding: 0;
+        }
+
+    body {
+        background-color: whitesmoke;  
+         }
+   
+    .wrapper {
+        width: 1024px;
+        background: -webkit-linear-gradient(left, black, black 33%, white 30%, gray);
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%) ;
+        overflow: hidden;
+   } 
+/* Header */
+
+   header {
+        background-color:transparent;
+        width: 1024px;
+    }
+
+    h1 {
+        position: absolute;    
+        font-size: 90px;
+        left: 470px;
+         color: black;
+    }
+
+    #photo {
+        width: 250px; 
+        margin-left: 190px;
+        margin-top:40px;
+    }
+
+    h2 {
+        display: block;
+        position: absolute;
+        right:698px;
+        top: 384px;
+        font-size: 55px; 
+    }
+
+    .nameContainer {
+        flex-direction: row;
+        width: 500px;
+        position: absolute;
+        top: 580px;
+        right: 390px;
+        font-size: 60px;
+        
+    }
+    .marco{
+        color: white;
+        background-color: transparent;
+    }
+
+    .deCara{
+        position: absolute;
+        right:30px;
+        color: black;
+        font-weight: bolder;
+    }
+
+/* Info */
+
+    .info {
+        font-size: 30px;
+        height: 1741px;
+        position: relative;
+    }
+
+    strong {
+        background-color: transparent;
+     
+      }
+    
+    #rect1 {
+        width: 200px;
+        height: 63px;
+        -ms-transform: rotate(20deg);
+        -webkit-transform: rotate(20deg);
+        transform: rotate(40deg);
+        background: white;
+        position: absolute;
+        top: -7px;
+        left: -88px;
+        box-shadow: 7px 10px grey;
+    }
+				
+  
+    .born {
+        position: absolute;
+        top: 142px;
+        left: 221px;
+    }
+    .bornC {
+        position: absolute;
+        right: 485px;
+    }
+
+    #rect2 {
+        width: 200px;
+        height: 50px;
+        -ms-transform: rotate(20deg);
+        -webkit-transform: rotate(20deg);
+        transform: rotate(40deg);
+        background: white;
+        position: absolute;
+        top: 62px;
+        left: -130px;
+        box-shadow: 7px 10px grey;
+    }
+    
+
+    .civil {
+        position: absolute;
+        top: 195px;
+        left: 72px;
+    }
+
+    .civilC {
+        position: absolute;
+        right: 616px;
+    }
+
+    #rect3 {
+        width: 200px;
+        height: 50px;
+        -ms-transform: rotate(20deg);
+        -webkit-transform: rotate(20deg);
+        transform: rotate(40deg);
+        background: white;
+        position: absolute;
+        top: 140px;
+        left: -137px;
+        box-shadow: 7px 10px grey;
+    }
+
+    .adress {
+        position: absolute;
+        top: 249px;
+        left: 334px;
+    }
+
+    .adressT{
+        position: absolute;
+        right:1044px;
+    }
+
+    .adressC {
+        position: absolute;
+        width: 667px;
+        top: -23px;
+        left: 8px;
+    }
+        
+    
+
+    #rect4 {
+        width: 200px;
+        height: 50px;
+        -ms-transform: rotate(20deg);
+        -webkit-transform: rotate(20deg);
+        transform: rotate(40deg);
+        background: white;
+        position: absolute;
+        top: 234px;
+        left: -128px;
+        box-shadow: 7px 10px grey;
+    }
+
+    .phone {
+        position: absolute;
+        top: 332px;
+        left: 199px;
+    }
+
+    .phoneC{
+        position: absolute;
+        right: 702px;
+    }
+
+    .mail {
+        position: absolute;
+        top: 389px;
+        left: 181px;
+    }
+
+    .mailC {
+        position: absolute;
+        right: 458px;
+    }
+
+    #rect5 {
+        width: 200px;
+        height: 50px;
+        -ms-transform: rotate(20deg);
+        -webkit-transform: rotate(20deg);
+        transform: rotate(40deg);
+        background: white;
+        position: absolute;
+        top: 336px;
+        left: -113px;
+        box-shadow: 7px 10px grey;
+    }
+
+    .about {
+        position: absolute;
+        top: 443px;
+        left: 144px;
+    }
+
+    .aboutC {
+        position: absolute;
+        left: 215px;
+        width: 646px;
+        bottom: -454px;
+    }
+
+    #rect6 {
+        width: 200px;
+        height: 50px;
+        -ms-transform: rotate(20deg);
+        -webkit-transform: rotate(20deg);
+        transform: rotate(40deg);
+        background: white;
+        position: absolute;
+        top: 858px;
+        left: -98px;
+        box-shadow: 7px 10px grey;
+    }
+
+    .education{
+        position: absolute;
+        top: 950px;
+        left: 125px;
+    }
+
+    .educationC{
+        position: absolute;
+        top: 3px;
+        right: -717px;
+        width: 646px;
+    }
+
+    .work{
+        position: absolute;
+        top: 1342px;
+        left: 24px;
+    }
+
+    .workC{
+        position: absolute;
+        top: 3px;
+        right: -707px;
+        width: 646px;
+    }
+
+    #rect7 {
+        width: 200px;
+        height: 50px;
+        -ms-transform: rotate(20deg);
+        -webkit-transform: rotate(20deg);
+        transform: rotate(40deg);
+        background: white;
+        position: absolute;
+        top: 1219px;
+        left: -115px;
+        box-shadow: 7px 10px grey;
+    }
+
+    #rect8 {
+        width: 200px;
+        height: 50px;
+        -ms-transform: rotate(20deg);
+        -webkit-transform: rotate(20deg);
+        transform: rotate(40deg);
+        background: white;
+        position: absolute;
+        top: 1508px;
+        left: -92px;
+        box-shadow: 7px 10px grey;
+    }
+
+    .languages {
+        position: absolute;
+        top: 1592px;
+        left: 126px;
+    }
+
+    .languagesC {
+        position: absolute;
+        top: 3px;
+        right: -717px;
+        width: 646px;
+    }
+
+/* Extra */
+    .extra {
+        background-color: white;
+    }  
+}
+
