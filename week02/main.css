@@ -1,0 +1,275 @@
+/* General settings */
+
+body {
+    font-family: arial;
+    line-height:  1.6;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header */
+
+header{
+    background-color: #fafafa;
+    padding-top: 1%;
+    padding-bottom: 0;
+}
+
+header h1 {
+    margin: 0% auto 0% 8% ;
+    padding-top: 3% ;
+    font-size: 5.5vh;
+}
+
+header h2 {
+    margin: 0% auto 0% 8% ;
+    font-weight: normal;
+    padding-top: 0.5%;
+    font-size: 2vh ;
+    color: gray;
+    margin-bottom: 2%;
+    padding-bottom: 1%;
+}
+
+header nav {
+    width: 100%;
+    background-color: white;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    border-top:  1px solid #efefef; 
+}
+
+header ul {
+    margin: 0% auto 1% 5% ;
+}
+
+header li {
+    display: inline;
+    background-color: white;
+    padding-right: 2%;
+ }
+
+header nav a {
+    color: black;
+    font-weight: bold;
+    font-size: 3vh;
+}
+
+header li:nth-child(2) a {
+color: grey;
+}
+
+header img {
+    width: 100%;
+}
+
+/* Main content */
+
+/* Make a grid for the main content */
+.content {
+    display: grid; 
+    grid-template-columns:  40% 60%;
+    grid-template-rows: auto auto; 
+    margin-bottom: 6%;
+    margin-top: 3%;
+}
+
+.content p {
+    color: gray;
+} 
+
+.practicalWeb {
+    grid-column: 2;
+    grid-row: 1;
+    width: 80%;
+    font-size: 2.3vh;
+}
+
+.practicalWeb p {
+    font-size: 2.3vh;
+}
+
+.webAsAnIndustry {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 1.6vh;
+    width: 55%;
+    margin-left:25%;
+}
+
+.webAsAnIndustry p {
+    font-size: 1.8vh;
+}
+
+.galleryInfo {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 1.6vh;
+    width: 55%;
+    margin-left:25%;
+    margin-top: 8%;
+}
+
+.galleryInfo p {
+    font-size: 1.8vh;
+}
+
+.logos {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 4%;
+}
+
+.logos img {
+    width: 14%;
+    margin: 3%;
+}
+
+/* Footer */
+
+ footer {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-column-gap: 4%;
+    justify-content:end;
+    background-color: #6736cd;
+    color: #fafafa;
+    padding-top: 4%;
+    padding-bottom: 10%;
+ }
+
+ footer h1,h2,p,a {
+    font-size: 3vh;
+}
+
+.findUs {
+    margin-left: 5%;
+}
+
+.findUs p {
+    margin-top: -2%;
+}
+
+iframe {
+width: 90%;
+height: 220px;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer a {
+    color: white;
+    font-weight: bold;
+}
+
+footer li:nth-child(n+2) {
+border-top: 1px solid grey;
+margin-top: 5%;
+padding-top: 10%;
+}
+
+footer nav:nth-of-type(1) li:nth-child(3) {
+padding-left:7%;
+}
+
+/* New layout for small screens */
+
+@media only screen and (max-width: 600px) {
+
+    header h1 {  
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+
+
+    header h2 {
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+
+
+    header ul {
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+
+    header li {
+        display: block;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns:  auto;
+        grid-template-rows: auto auto auto auto; 
+        text-align: left;
+    }
+
+    .practicalWeb {
+        grid-column: 1;
+        grid-row: 1;
+        margin-top: 0px;
+    }
+    
+    .webAsAnIndustry {
+        grid-column: 1;
+        grid-row: 2;
+        width: 100%;
+        font-size: 2.3vh;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    .webAsAnIndustry p, .galleryInfo p {
+        font-size: 2.3vh;
+    }
+
+    .galleryInfo {
+        grid-column: 1;
+        grid-row: 3;
+        width: 100%;
+        font-size: 2.3vh;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+
+    .logos {
+        grid-column: 1;
+        grid-row: 4;
+        margin-top: 0px;
+        text-align: center;
+        font-size: 2.3vh;
+    }
+
+    .logos img {
+        width: 34%;
+        margin: 7%;
+    }
+
+    .logos h1 {
+        text-align: left;
+    }
+
+/* Footer */
+
+    footer {
+        display: grid;
+        grid-template-columns: auto;
+        grid-auto-rows: auto auto auto auto;
+    }
+
+    footer h1 {
+    text-align: center;
+    color: black;
+    margin-top: 2%;
+    }
+
+}
+
+/* This webpage has been done as an assigment for HackYourFuture Copenhaguen */
