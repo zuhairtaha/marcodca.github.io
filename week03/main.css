@@ -19,6 +19,10 @@ header nav {
     display: inline;
 }
 
+nav {
+    margin-left: 700px;
+}
+
 
 
 nav a {
