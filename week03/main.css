@@ -78,7 +78,7 @@ header ~ p{
 }
 
 .progressContainer {
-    width: 1260px;
+    width: 80%;
     height: 70px;
     border: black solid 2px;
     padding-bottom: -50px;
