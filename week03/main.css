@@ -13,7 +13,7 @@ header{
 }
 
 header nav {
-    margin-left: 50%;
+    margin-left: 70%;
     margin-top: -65px;
     padding-bottom: 30px;
     display: inline-block;
@@ -75,7 +75,7 @@ header ~ p{
 }
 
 .progressContainer {
-    width: 1260px;
+    width: 1060px;
     height: 70px;
     border: black solid 2px;
     padding-bottom: -50px;
