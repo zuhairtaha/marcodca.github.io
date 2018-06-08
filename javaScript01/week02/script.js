@@ -1,7 +1,7 @@
 //Create an array with the names of all the class members.
 
 
-let hYF06 = ['Syed Zeeshan', 'Anas', 'Anowar Uddin', 'Anuradha Mohanty', 'Constance mudondo', 'Marco de Cara', 'Ehsan','Haretha','Krishna Rana', 'Majd Darraj','Mohammad Azizul Huq','Mohammad Mosiur Rahman','Samara', 'Mohammad Azizul Huq','Vignesh','Zoey Zou'];
+let hYF06 = ['Zeeshan', 'Anas', 'Sajid', 'Anuradha', 'Gary', 'Marco', 'Ehsan','Haretha','Krishna', 'Mohammad Azizul Huq','Mohammad Mosiur Rahman','Samara', 'Vignesh', 'Zoey Zou', 'Mohammad Subhiyeh'];
 
 //Log the array.
 
