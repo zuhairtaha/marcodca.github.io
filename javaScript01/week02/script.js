@@ -50,7 +50,7 @@ else {
     }
     console.log(person1 , person2 +'(more than one attempt was needed!)');
 
-    document.write(`The randomly generated pair of classmates is: ${person1} and ${person2}`)
+    document.write(`The randomly generated pair of classmates is: ${person1} and ${person2} .`)
     
 
 }
