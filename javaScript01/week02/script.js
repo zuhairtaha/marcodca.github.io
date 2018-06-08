@@ -36,7 +36,7 @@ if ( person1 !== person2) {
     
     console.log(person1 , person2);
 
-    document.write(`The randomly generated pair of classmates is: ${person1} and ${person2}`)
+    document.write(`The randomly generated pair of classmates is: ${person1} and ${person2} .`)
 
 }
 else {
