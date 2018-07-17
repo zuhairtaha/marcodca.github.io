@@ -1,0 +1,30 @@
+body {
+    background: rgb(222,210,73);
+    background: linear-gradient(190deg, rgba(222,210,73,1) 0%, rgba(217,184,126,1) 48%, rgba(225,231,214,0.9556197478991597) 100%);
+    text-align: center;
+}
+
+#mainWrapper div:first-of-type{
+    background-color: #d3e6e7;
+    padding: 1%;
+    border-radius: 5px;
+    width: 80%;
+    margin: auto;
+}
+
+#step3{
+    font-size: 2em;
+}
+
+#btn{
+    margin: 2%;
+    padding: 1%;
+}
+
+#excer3{
+    background-color: #d3e6e7;
+    padding: 1%;
+    border-radius: 5px;
+    width: 80%;
+    margin: auto;
+}
