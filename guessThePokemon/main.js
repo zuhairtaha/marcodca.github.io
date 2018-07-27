@@ -66,7 +66,7 @@ getData(`https://pokeapi.co/api/v2/pokemon-species/${getRandom(152)}/`, (data)=>
         const answerString = formData.get('answerString');
 
         if (answerString.toLowerCase() == name){
-            getData(`http://api.giphy.com/v1/gifs/search?q=${name}&api_key=y6cLtap8SATIo05Inq4QAg2vkrXZK68P&limit=5`, (info => {
+            getData(`https://api.giphy.com/v1/gifs/search?q=${name}&api_key=y6cLtap8SATIo05Inq4QAg2vkrXZK68P&limit=5`, (info => {
                 console.log(info);
                 const img = info['data'][getRandom(info['data'].length)].images.preview_gif.url;
                 console.log(img);
