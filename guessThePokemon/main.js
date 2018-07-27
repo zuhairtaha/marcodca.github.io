@@ -31,8 +31,7 @@ getData(`https://pokeapi.co/api/v2/pokemon-species/${getRandom(152)}/`, (data)=>
 
     // A variable for the pokemon name
     const name = data.name;
-    console.log(name);
-
+    
     const flavArray = [];
     //We make an array containing only the flavor text entries which language is english.
     for (let i = 0; i < data.flavor_text_entries.length; i++){
@@ -40,8 +39,6 @@ getData(`https://pokeapi.co/api/v2/pokemon-species/${getRandom(152)}/`, (data)=>
             flavArray.push(data.flavor_text_entries[i]);
         }
     }
-    console.log(flavArray);
-
     // Now we get a random flavor text from the array.
     
     let flavText = flavArray[getRandom(flavArray.length)].flavor_text.toLowerCase();
@@ -54,8 +51,6 @@ getData(`https://pokeapi.co/api/v2/pokemon-species/${getRandom(152)}/`, (data)=>
     }
         hint.innerHTML = `<p>${flavText}</p>`
 
-    console.log(flavText);
-
     //Getting the answer input
 
     const answerInput = document.querySelector('#answer');
@@ -67,9 +62,7 @@ getData(`https://pokeapi.co/api/v2/pokemon-species/${getRandom(152)}/`, (data)=>
 
         if (answerString.toLowerCase() == name){
             getData(`https://api.giphy.com/v1/gifs/search?q=${name}&api_key=y6cLtap8SATIo05Inq4QAg2vkrXZK68P&limit=5`, (info => {
-                console.log(info);
                 const img = info['data'][getRandom(info['data'].length)].images.preview_gif.url;
-                console.log(img);
                 messeges.innerHTML = `<p>CORRECT!, you are a real pokemon master!</p><br><img src=${img}>`
             }))
             
