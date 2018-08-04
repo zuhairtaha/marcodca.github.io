@@ -45,7 +45,7 @@ getAjaxData("https://gist.githubusercontent.com/pankaj28843/08f397fcea7c760a9920
                 movie.tag = "Good"
                 break;
 
-                case (movie.rating >= 4 || movie.rating < 7 ) :
+                case (movie.rating >= 4 & movie.rating < 7 ) :
                 movie.tag = "Average"
                 break;
 
