@@ -1,0 +1,78 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #45f8f8;
+    font-family: 'Sunflower', sans-serif;   
+}
+/*Header*/
+header {
+    text-align: center;
+    background-color: beige;
+    padding: 1%;
+    border: 2px black solid;
+    border-radius: 5px;
+}
+
+aside{
+    background-color: #e2e2e2;
+    padding: 1%;
+    border-radius: 5px;
+}
+
+header img{
+    display: block;
+    margin: auto;
+    width: 30%;
+    position: relative;
+}
+header div:last-child{
+    padding: 0.5%;
+}
+header span{
+    padding: 0.5%;
+    
+}
+
+ button{
+    padding: 1%;
+}
+
+/*Content*/
+
+#content{
+    width: 96%;
+    margin:auto;
+}
+
+#content div {
+    display: inline-block;
+    text-align: center;
+    padding: 1%;
+}
+
+#content h3{
+    background-color: beige;
+    opacity: 0.8;
+    margin-bottom: -0.5%;
+    border-radius: 5px;
+    padding: 0.5%;
+    display: inline-block;
+    text-align: center;
+}
+
+/*ul*/
+
+ul{
+    padding-left: 0%;
+    text-align: center;
+    list-style-type: none;
+    border-radius: 5px;
+    background-color: beige;
+}
+
+/*li*/
+
+li{
+    padding: 5%;
+    
+}

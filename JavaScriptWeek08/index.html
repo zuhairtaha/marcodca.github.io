@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
+    <title>JavaScript 06</title>
+</head>
+<body>
+    <header>    
+        <aside><p>In order to check the solutions for step 1 of the homework, the console needs to be checked.</p></aside>
+        <img src="logo.png" alt="Hack your future Logo">
+    <div id ="inputs">
+            <input type="checkbox" id="allTags" name="allTags"
+            value="allTags" />
+            <label for="good">All tags</label>
+        <form id="tagsFilter">
+            <input type="checkbox" id="goodCheck" name="good"
+            value="Good" />
+            <label for="good">Good</label>
+            <input type="checkbox" id="avarageCheck" name="avarage"
+            value="Avarage" />
+            <label for="avarage">Avarage</label>
+            <input type="checkbox" id="badCheck" name="bad"
+            value="Bad" />
+            <label for="bad">Bad</label>
+        </form>
+        <input type="text" id="searchString" placeholder="Type for searching">   
+    </div>
+    <div>The avarage rating of the movies currently being shown is: <span id="displayAvarage"></span></div>
+    </header>
+    <div id='content'></div>
+   <script src="main.js"></script>    
+</body>
+</html>
