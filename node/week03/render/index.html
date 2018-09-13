@@ -1,0 +1,26 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<style>
+    body {background-color: #b9fafd;
+        font-family: sans-serif;
+        text-align: center;
+        padding: 1%;
+    }       
+    .succes {color: green;}
+</style>
+<body>
+    <form action="http://localhost:8080/create" method="post">
+        <label for="url_input">URL Shortener</label><br>
+        <input type="text" id="url_input" name="url_input" placeholder="Enter the URL to shorten"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script src="url-shortener.js"></script>
+</body>
+
+</html>
