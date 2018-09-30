@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <!-- <script src="main.js"></script> -->
+</head>
+
+<body>
+    <fieldset>
+        <legend>Create a new Note:</legend>
+        <form action="/notes/api" method="post">
+
+            <label for="noteTitle">Note title</label>
+            <input type="text" name="title" id="noteTitle"><br>
+
+            <label for="noteContent">Note content</label><br>
+            <textarea name="content" id="noteContent" rows="10" cols="30"></textarea><br>
+
+            <label for="noteTags">Tags</label><br>
+            <select name="tags" id="noteTags" multiple>
+                <option value="reminder">Reminder</option>
+                <option value="to-do">To-do</option>
+                <option value="post-it">Post-it</option>
+                <option value="other">Other</option>
+
+            </select><br>
+
+            <input type="submit" value="Create Note">
+        </form>
+    </fieldset>
+
+
+    </select><br>
+    <br>
+    <fieldset>
+        <legend>Get all notes</legend>
+        <form action="/notes/api" method="get">
+            <input type="submit" value="Get ALL Notes">
+        </form><br>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Get a particular note</legend>
+        <form action="/notes/api/title" method="get" id="oneNoteForm">
+            <select name="oneNoteSelect" id="oneNoteSelect" multiple></select><br>
+            <input type="submit" value="Get Note" id="oneNoteButton">
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>Delete a note</legend>
+        <form action="/notes/api/title" method="delete" id="deleteForm">
+            <select name="deleteSelect" id="deleteSelect" multiple></select><br>
+            <input type="submit" value="Delete Note" id="deleteButton">
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>Update a note</legend>
+        <form action="/notes/api/title" method="post" id="updateForm">
+            <label for='updateSelect'>Select the note to update</label><br>
+            <select name="updateSelect" id="updateSelect" multiple></select><br>
+
+            <label for="newTitle">New title</label>
+            <input type="text" name="title" id="newTitle"><br>
+
+            <label for="newContent">New content</label><br>
+            <textarea name="content" id="newContent" rows="10" cols="30"></textarea><br>
+
+            <label for="newTags">New Tags</label><br>
+            <select name="tags" id="newTags" multiple>
+                <option value="reminder">Reminder</option>
+                <option value="to-do">To-do</option>
+                <option value="post-it">Post-it</option>
+                <option value="other">Other</option>
+
+            </select><br>
+
+            <input type="submit" value="Update Note" id="updateButton">
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>Filter Notes by tag</legend>
+        <form action="/notes/api/tag" method="GET" id="filterForm">
+            <select name="filterSelect" id="filterTags" multiple>
+                <option value="reminder">Reminder</option>
+                <option value="to-do">To-do</option>
+                <option value="post-it">Post-it</option>
+                <option value="other">Other</option>
+            </select><br>
+            <input type="submit" value="Filter Notes" id="filterButton">
+
+        </form>
+    </fieldset>
+</body>
+<script>
+    const url = window.location.href;
+    getTitles().then((titles) => {
+
+        const allTitles = titles.map((title) => {
+            return `<option value=${title}>${title}</option>`
+        });
+
+        //OneNote
+        const oneNoteForm = document.querySelector('#oneNoteForm');
+        const oneNoteButton = document.querySelector('#oneNoteButton');
+        oneNoteButton.addEventListener('click', () => {
+            oneNoteForm.action = `api/${oneNoteSelect.value}`;
+        })
+        oneNoteSelect.innerHTML = allTitles;
+        //Delete Note
+        const deleteForm = document.querySelector('#deleteForm');
+        const deleteButton = document.querySelector('#deleteButton');
+        deleteButton.addEventListener('click', () => {
+            deleteForm.action = `api/${deleteSelect.value}`;
+        })
+        deleteSelect.innerHTML = allTitles;
+        //Update Note 
+        const updateForm = document.querySelector('#updateForm');
+        const updateButton = document.querySelector('#updateButton');
+        updateButton.addEventListener('click', () => {
+            updateForm.action = `/notes/api/${updateSelect.value}`;
+        })
+        //filter note
+        const filterForm = document.querySelector('#filterForm');
+        const filterButton = document.querySelector('#filterButton');
+        const filterSelect = document.querySelector('#filterSelect');
+        filterButton.addEventListener('click', (event)=>{
+            
+            filterForm.action = `/notes/api/tag/${filterTags.value}`
+        })
+        updateSelect.innerHTML = allTitles;
+    })
+
+
+    function getTitles() {
+        return new Promise((resolve, reject) => {
+            fetch(url + '/api')
+                .then((response) => {
+                    return response.json()
+                })
+                .then((arrOfNotes) => {
+                    resolve(arrOfNotes.map(note => note._title));
+                })
+
+        })
+    }
+</script>
+
+</html>

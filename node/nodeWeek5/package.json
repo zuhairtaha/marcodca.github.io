@@ -1,0 +1,28 @@
+{
+    "name": "nodeweek5",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prestart": "npm run build",
+        "start": "node dist/app.js",
+        "build": "babel src/ -d dist/ --source-maps",
+        "watch": "babel -w src/ -d dist/ --source-maps"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-cli": "6.26.0",
+        "babel-preset-env": "1.6.1"
+    },
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "express": "^4.16.3",
+        "request": "^2.88.0"
+    },
+    "engines": {
+        "node" : "v8.11.4"
+    }
+}
