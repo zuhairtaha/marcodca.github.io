@@ -133,6 +133,39 @@ connection.deleteUser = function(userID){
 }
 
 
+// Create a new database containing the following tables:
+// Class: with the columns: id, name, begins (date), ends (date)
+// Student: with the columns: id, name, email, phone, class_id (foreign key)
+
+// CREATE DATABASE school;
+
+// CREATE TABLE class(
+//     ID INT NOT NULL AUTO_INCREMENT,
+//     name VARCHAR(255) NOT NULL,
+//     begins DATETIME  NOT NULL,
+//     ends DATETIME,
+//     PRIMARY KEY (ID)
+// );
+
+// CREATE TABLE student(
+//     ID INT NOT NULL AUTO_INCREMENT,
+//     name VARCHAR(255) NOT NULL,
+//     email VARCHAR(320) NOT NULL,
+//     phone INT,
+//     class_ID INT NOT NULL,
+//     PRIMARY KEY (ID),
+//     FOREIGN KEY (class_ID ) REFERENCES class (ID)
+// );
+
+// Create an index on the name column of the student table.
+
+// CREATE UNIQUE INDEX name_index
+// ON student(name);
+
+// Add a new column to the class table named status which can only have the following values: not-started, ongoing, finished (hint: enumerations).
+
+// ALTER TABLE student
+// ADD status SET("not-started", "ongoing", "finished") NOT NULL; 
 
 
 
