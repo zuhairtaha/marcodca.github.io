@@ -10,7 +10,19 @@ I decided to go with a fictional database for storing playlists of songs in an a
 - Each playlist should correspond to only one user,  but a user could have many playlists.
 - Each playlist could have many songs, and a song could also be in several playlists.  
 - A song could be made by one or more artists, but belong only to one album.
--Each artist could have several songs and albums. but an album can belong only to one artist.
+- Each artist could have several songs and albums. but an album can belong only to one artist.
+
 Additionally:
--Each song should belong to one, and only one, genre, but of course, each genre could have many songs.  
--Each user can put a grade to a song (even if it's not on one of his playlists), and thus, the same song can have different grades from several users. 
+
+- Each song should belong to one, and only one, genre, but of course, each genre could have many songs.  
+- Each user can put a grade to a song (even if it's not on one of his playlists), and thus, the same song can have different grades from several users. 
+
+<h3>Concept diagram:</h3>
+
+![concept diagram](https://github.com/marcodca/marcodca.github.io/blob/master/databases/week_3/img/diagram.png)
+
+<h3>Final result:</h3>
+
+![final diagram](https://github.com/marcodca/marcodca.github.io/blob/master/databases/week_3/img/final_diagram.png)
+
+<sub> I used the term "valoration" to reffer to the grade of a song, but it turns out that is not an english word, d'ah!</sub>
